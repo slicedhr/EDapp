@@ -1,0 +1,57 @@
+<md-content class="categorias anim-slide-below-fade background">
+
+	<div layout="column" layout-fill>
+	  	<div class="categorias__toolbar md-whiteframe-z2 relative">
+		    
+    		<md-icon class="categorias__toolbar__iconbg" md-svg-icon="images/ic_playlist_add_check_black_24px.svg"></md-icon>
+
+		    <md-button class="md-icon-button button-menu" aria-label="menu" ng-click="openMenu('left')">
+		      <md-icon md-svg-icon="images/ic_menu_white_24px.svg"></md-icon>
+		    </md-button>
+		    <h2 class="text-center">
+		      <span>Categorias</span>
+		    </h2>
+		    <md-button class="md-fab md-warn categorias__toolbar__button" aria-label="description" ng-click="categorias.openDialog($event)">+
+			    <md-tooltip md-direction="bottom">
+			      Crear
+			    </md-tooltip>
+		    </md-button>
+		</div>
+	  	<div class="categorias__container background" layout-padding>
+
+			<md-list class="categorias__container__list md-whiteframe-z3">
+				
+				<md-list-item class="md-2-line" ng-if="!categorias.data.length">
+				  <p>No existe ningún registro.</p>
+				</md-list-item>
+
+				<div ng-if="categorias.data.length">
+
+				  <md-list-item class="md-2-line" ng-repeat="item in categorias.data">
+
+				    <p>{{ item.nombre }}</p> 
+				    
+				    <md-button class="md-raised md-accent" ng-disabled="loading" aria-label="Edit" ng-click="categorias.openDialog($event, item)">
+
+						<md-icon md-svg-icon="images/ic_mode_edit_white_24px.svg"></md-icon>
+
+					</md-button>
+
+					<md-button class="md-raised md-primary" ng-disabled="loading" aria-label="Delete" ng-click="categorias.delete($event, item)">
+						
+						<md-icon md-svg-icon="images/ic_delete_forever_white_24px.svg"></md-icon>
+
+					</md-button>
+
+				  </md-list-item>
+
+			  </div>
+			</md-list>
+
+			
+		
+		</div>
+	</div>
+<the-footer></the-footer>
+
+</md-content>

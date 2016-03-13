@@ -1,0 +1,23 @@
+<ion-content
+	class="confignotificaciones anim-slide-below-fade">
+	<br>
+	<br>
+	<ion-list>
+
+		<h2 style="
+    text-align: center;
+    margin: 1em auto;
+">Configurar Notificaciones</h2>
+
+	  <ion-checkbox ng-model="item.checked" ng-repeat="item in configNotificaciones.categorias" ng-change="configNotificaciones.addOrDelete(item)">
+		{{ item.nombre}}
+	  </ion-checkbox>
+
+	</ion-list>
+	
+
+	<br>
+	<p>
+	</p>
+
+</ion-content>

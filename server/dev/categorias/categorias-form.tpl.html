@@ -1,0 +1,29 @@
+<md-dialog aria-label="Categorias">
+
+	<div layout="column" layout-fill>
+
+	  <md-toolbar>
+	    <h2 class="text-center">
+	      <span>Categoría</span>
+	    </h2>
+	  </md-toolbar>
+
+	  <md-content>
+	    <form ng-submit="categoriaForm.save()" layout-padding>
+
+			<md-input-container>
+				<label>Nombre</label>
+				<input type="text" ng-model="categoriaForm.data.nombre" required>
+			</md-input-container>
+
+
+			<div layout="row">
+				<md-button class="md-raised md-accent color-white" ng-disabled="loading" aria-label="Crear" flex><md-icon md-svg-src="images/ic_save_white_24px.svg" class="name" flex></md-icon> Guardar</md-button>
+			
+			</div>
+		</form>
+	  </md-content>
+	</div>
+	
+
+</md-dialog>

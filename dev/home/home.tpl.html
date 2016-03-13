@@ -1,0 +1,26 @@
+<ion-content
+	class="home"
+  	overflow-scroll="isVisibleContentHome"
+  	scrollbar-y="isVisibleContentHome">
+
+  	<div ng-show="isVisibleContentHome">
+
+		<div ng-repeat="item in home.images" ng-class="{'firstelement_home_images': $first}">
+
+  			<img class="home__imagebutton anim-slide-left" ng-src="images/{{ item.image }}" on-tap="app.goAndLoad(item.target)" alt="" ng-if="$even">
+
+  			<img class="home__imagebutton anim-slide-right" ng-src="images/{{ item.image }}" on-tap="app.goAndLoad(item.target)" alt="" ng-if="$odd">
+
+		</div>
+
+  	</div>
+
+	<div class="home__noticias-container anim-fade" ng-show="!isVisibleContentHome">
+
+		<!-- <div class="home__noticias-container__publicidad-box">PUBLICIDAD</div> -->
+
+		<object type="text/html" ng-attr-data="{{ urlContent }}" class="home__noticias-container__iframe anim-fade" height="{{deviceHeight}}px" width="{{ app.width }}%" frameborder="0">Hay un problema con tu conexión</object>
+		
+	</div>
+
+</ion-content>

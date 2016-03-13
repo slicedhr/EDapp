@@ -1,0 +1,30 @@
+<md-content class="login anim-fade">
+
+	<div layout="column" class="login__container md-whiteframe-z5">
+
+		<header class="login__container__header">
+			
+		</header>
+
+		<form ng-submit="login.send()" class="login__container__form">
+				
+			<md-input-container>
+				<label>Email</label>
+				<input type="email" ng-model="login.loginData.email" required>
+			</md-input-container>
+
+			<md-input-container>
+				<label>Password</label>
+				<input type="password" ng-model="login.loginData.password" required>
+			</md-input-container>
+
+			<div layout="row">
+				<md-button class="md-raised login__container__form__button" ng-disabled="isLoading" aria-label="Login button" flex>
+				<md-icon md-svg-src="images/ic_send_white_24px.svg" class="name" flex></md-icon> Ingresar</md-button>
+			</div>
+
+		</form>
+
+	</div>
+
+</md-content>

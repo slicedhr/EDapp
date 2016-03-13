@@ -1,0 +1,43 @@
+.categorias
+	overflow-x hidden 
+	&__toolbar
+		background black
+		color white
+		height 180px
+		&__button
+			position absolute
+			right 5%
+			bottom -30px
+			color white !important
+			font-size 30px
+			
+			@media screen and (max-width: 800px)
+				position fixed
+				right 4%
+				top 85%
+		.button-menu
+			position absolute
+			top 5%
+			left 1%
+		
+		&__iconbg
+			position absolute
+			right 5%
+			top 40%
+			transform scale(9)
+			svg
+				fill rgba(255, 255, 255, 0.16)
+		
+	&__container
+		z-index 2
+		&__list
+			background white
+			margin 1em auto 
+			margin-top -80px
+			padding 1em
+			width 50%
+			
+			@media screen and (max-width: 800px) 
+				width 95%
+			p
+				margin-top 13px

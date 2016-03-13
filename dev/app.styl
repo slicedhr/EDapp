@@ -1,0 +1,146 @@
+@import 'variables'
+.loaded
+	transition all .5s ease
+	opacity 1
+.rightmenu
+	background #353132
+	color white
+	&__linkscontainer
+		position relative
+		&__scroll
+			height 100vh
+		&__button
+			background #353132
+			border-bottom thin solid primary-color
+			color white
+			font-size 14px
+			line-height 22px
+			padding 12px 6px
+			position relative
+			text-align left
+			white-space normal
+			width 100%
+			&__paragraph
+				z-index 1
+			&__icon
+				color rgba(0, 0, 0, 0.2)
+				font-size 63px
+				position absolute
+				right 0
+				top 33%
+				transform scale(4)
+				z-index 0
+			&.activated
+				background #e92531
+				color white
+			&:hover
+				color white
+		&__title
+			background white
+			color #515151
+			border-bottom 3px solid primary-color
+			margin-top -1px !important
+			position relative
+			text-align center
+			padding 3%
+			&__icon
+				color rgba(81, 81, 81, 0.21)
+				font-size 63px
+				position absolute
+				right -7px
+				top -10px
+.leftmenu
+	background primary-color
+	&__linkscontainer
+		&__scroll
+			height 100vh
+		&__logo
+			padding 10px 0
+			img
+				display block
+				margin 0 auto
+				max-width 50%
+		&__link
+			background primary-color
+			border none
+			color white !important
+			&.activated
+				background darkprimary-color
+		
+.appcontent
+	&__header
+		background white
+		border-bottom 3px solid primary-color
+		position fixed
+		text-align center
+		top 0
+		width 100%
+		z-index 2
+		&__logo
+			width 40%
+		&__button_left
+			background transparent
+			border none
+			color primary-color
+			font-size 2em
+			position absolute
+			left 3%
+			top 8%
+		&__button_right
+			background transparent
+			border none
+			color primary-color
+			font-size 2em
+			position absolute
+			right 3%
+			top 8%
+		
+	&__content
+		ion-content
+			margin-bottom 15%
+	&__fixed-bottom-nav
+		background lightgrayfixedmenu-color
+		bottom 0
+		border-top 3px solid darkprimary-color
+		color white
+		left 0
+		position fixed
+		width 100%
+		z-index 2
+		&__item
+			background transparent
+			border-radius 0
+			color white
+			display inline-block
+			line-height 17px
+			padding 0
+			padding-top 4px
+			position relative
+			text-decoration none
+			text-align center
+			width 19%
+			&:hover
+				color white
+			span
+				display block
+				font-size 11px
+			img
+				margin-bottom -8px
+				max-width 100%
+				width 50%
+			&:first-child
+				img
+					margin-bottom 0
+					width 60%
+			// &:last-child
+			// 	img
+			// 		bottom 15%
+			// 		left 16%
+			// 		position absolute
+			// 		width 70%
+			// 	span
+			// 		bottom -12%
+			// 		left 34%
+			// 		position absolute
+			&.activated
+				background black

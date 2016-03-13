@@ -1,0 +1,28 @@
+@import '../variables'
+
+black-header = #120B12
+
+.jugador-del-mes
+	margin-top 13%
+	&__header
+		background black-header
+		display flex
+		flex-direction column
+		height 15vh
+		justify-content center
+		&__title
+			color white
+			font-size 1.2em
+			text-align center
+	&__content
+		&__button
+			background primary-color
+			color white
+			display block
+			font-size 2em
+			margin 5% auto
+			width 90%
+			&:hover
+				color white
+			&.activated
+				background darkprimary-color

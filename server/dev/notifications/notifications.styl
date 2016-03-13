@@ -1,0 +1,32 @@
+.notifications
+	overflow-x hidden
+	&__toolbar
+		height 180px
+		position relative 
+		&__iconbg
+			position absolute
+			right 4%
+			top 40%
+			transform scale(9)
+			svg
+				fill rgba(255, 255, 255, 0.16)
+	&__container
+		z-index 2
+		&__form
+			background white
+			margin 0 auto
+			margin-top -80px
+			padding 5em
+			width 40%
+			
+			@media screen and (max-width: 800px)
+				padding 2em
+				width 90%
+			&__categorias
+				p
+					margin-top 13px !important
+			&__button
+				width 100%
+.button-menu
+	position absolute
+	top 13%

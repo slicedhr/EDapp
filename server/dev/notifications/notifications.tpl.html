@@ -1,0 +1,79 @@
+<md-content class="notifications anim-slide-below-fade background">
+
+<div layout="column" layout-fill>
+  <md-toolbar class="notifications__toolbar md-whiteframe-z2 relative">
+    
+    <md-icon class="notifications__toolbar__iconbg" md-svg-icon="images/ic_notifications_black_24px.svg"></md-icon>
+    
+    <md-button class="md-icon-button button-menu" aria-label="menu" ng-click="openMenu('left')">
+      <md-icon md-svg-icon="images/ic_menu_white_24px.svg"></md-icon>
+    </md-button>
+    <h2 class="text-center">
+      <span>Enviar Notificación</span>
+    </h2>
+  </md-toolbar>
+  <div class="background notifications__container" layout-padding>
+
+    <form ng-submit="notifications.send()" class="notifications__container__form md-whiteframe-z3">
+        
+        <md-input-container class="md-icon-float">
+            <label>Título(Solo en Android)</label>
+            <md-icon md-svg-src="images/ic_textsms_black_24px.svg" class="name"></md-icon>
+            <input type="text" ng-model="notifications.data.headings.en" required>
+        </md-input-container>
+
+        <md-input-container class="md-icon-float">
+            <label>Contenido</label>
+            <md-icon md-svg-src="images/ic_receipt_black_24px.svg" class="name"></md-icon>
+            <input type="text" ng-model="notifications.data.contents.en" required>
+        </md-input-container>
+
+        <md-input-container class="md-icon-float">
+            <label>Enlace a cargar en aplicación</label>
+            <md-icon md-svg-src="images/ic_link_black_24px.svg" class="name"></md-icon>
+            <input type="text" ng-model="notifications.data.data.link">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float">
+            <label>Imagen</label>
+            <md-icon md-svg-src="images/ic_image_black_24px.svg" class="name"></md-icon>
+            <input type="text" ng-model="notifications.data.big_picture">
+        </md-input-container>
+
+
+        <md-checkbox class="md-primary" ng-model="notifications.data.isIos" aria-label="isIos">
+            ¿Para dispositivos IOS?
+        </md-checkbox>
+        <md-checkbox class="md-primary" ng-model="notifications.data.isAndroid" aria-label="isAndroid">
+            ¿Para dispositivos Android?
+        </md-checkbox>
+        
+        <div class="notifications__container__form__categorias">
+            <md-subheader>Categorias</md-subheader>
+            <md-list>
+             <!--  <md-list-item class="md-2-line">
+                    <md-checkbox class="md-primary" ng-model="notifications.selectedAll" aria-label="Tags" ng-change="notifications.selectAll()">
+                        
+                    </md-checkbox>
+                    <p>{{ notifications.selectedAll ? 'Deseleccionar' : 'Seleccionar' }} Todo</p>
+              </md-list-item> -->
+              <md-list-item class="md-2-line" ng-repeat="item in notifications.categorias">
+                    <md-checkbox class="md-primary" ng-model="notifications.data.tags[item.id]" aria-label="Tags" ng-change="notifications.addOrRemoveTag(item.id)">
+                        
+                    </md-checkbox>
+                    <p>{{ item.nombre }}</p>
+              </md-list-item>
+            </md-list>
+        </div>
+
+            
+        <md-button class="md-raised md-warn notifications__container__form__button" ng-disabled="loading" aria-label="Send"><md-icon md-svg-src="images/ic_send_white_24px.svg" class="name" flex></md-icon> Enviar</md-button>
+
+
+    </form>
+  </div>
+</div>
+
+<the-footer></the-footer>
+    
+</md-content>
