@@ -228,8 +228,8 @@ if (!Array.prototype.find) {
           window
             .plugins
             .OneSignal
-            .init("64cbaa44-6057-4cfb-8b29-b87020fb880c", { 
-              googleProjectNumber: "565797230147" 
+            .init("5fc5dbef-a106-473d-adc6-648a9b5ff9a7", { 
+              googleProjectNumber: "981614261162" 
             }, notificationOpenedCallback);
 
             window.plugins.OneSignal.enableInAppAlertNotification(true)
@@ -306,9 +306,9 @@ if (!Array.prototype.find) {
 
       $rootScope.deviceHeight = window.screen.height;
 
-      // $rootScope.audio = document.createElement('audio');
+      $rootScope.audio = document.createElement('audio');
 
-      // $rootScope.audio.src = 'http://radio25.virtualtronics.com:8272/;stream.mp3';
+      $rootScope.audio.src = 'http://radio25.virtualtronics.com:8272/;stream.mp3';
 
        // When is loading
       

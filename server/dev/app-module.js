@@ -198,6 +198,9 @@
 
       this.loading = false
 
+      this.loaded = true
+
+
       if (sessionStorage['JWT']){
 
         AuthService.verify().then( function (response) {

@@ -19,7 +19,7 @@
     <!-- inject:css -->
     <!-- endinject -->
   </head>
-  <body ng-controller="AppCtrl as app" class="background">
+  <body ng-controller="AppCtrl as app" class="background" style="opacity: 0" ng-class="{ loaded: app.loaded }">
 
 
     <md-content layout="column">

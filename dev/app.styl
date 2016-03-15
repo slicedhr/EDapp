@@ -1,7 +1,7 @@
 @import 'variables'
 .loaded
-	transition all .5s ease
 	opacity 1
+	transition all ease .6s
 .rightmenu
 	background #353132
 	color white
@@ -52,6 +52,10 @@
 .leftmenu
 	background primary-color
 	&__linkscontainer
+		.scroll
+			max-height 100%
+			overflow-y auto
+			overflow-x hidden
 		&__scroll
 			height 100vh
 		&__logo

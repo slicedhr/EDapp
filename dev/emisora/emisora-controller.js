@@ -16,13 +16,13 @@
 
     var vm = this;
 
-    // $rootScope.audio.play();
+    $rootScope.audio.play();
     
-    // $rootScope.playing = true;
+    $rootScope.playing = true;
 
-    var audio = document.getElementById('audio')
+    // var audio = document.getElementById('audio')
 
-    audio.play()
+    // audio.play()
 
     vm.playToggle = function(){
 
